@@ -2,11 +2,11 @@ use v6;
 
 module Util::Uuencode {
 
-    multi sub uuencode(Str $in --> buf8) is export(:DEFAULT) {
+    multi sub uuencode(Str $in --> Str) is export(:DEFAULT) {
         uuencode(buf8.new($in.encode));
     }
 
-    multi sub uuencode(buf8 $in is copy --> buf8) is export(:DEFAULT) {
+    multi sub uuencode(buf8 $in is copy --> Str) is export(:DEFAULT) {
         my $elems = $in.elems;
         my  buf8 $out = buf8.new;
 
@@ -18,7 +18,8 @@ module Util::Uuencode {
             my Int @line;
             @line.append: $buf.elems + 32;
 
-            $buf.append: (0) xx (3 - ($elems % 3));
+
+            $buf.append: (0) xx (3 - ($buf.elems % 3));
 
             for (^(($buf.elems * 8) / 6 )).map( * * 6 ) -> $start {
                 @line.append: $buf.read-ubits($start, 6) + 32;
@@ -27,7 +28,7 @@ module Util::Uuencode {
             $out.append: @line;
             $pos += 45;
         }
-        $out;
+        $out.decode('ascii');
     }
 
     multi sub uudecode(Str $in --> buf8) is export(:DEFAULT) {
