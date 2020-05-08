@@ -72,6 +72,15 @@ lives-ok {
 
 is-deeply $decoded, $image, "and it was round-tripped successfully";
 
+# Test that we can decode one made by the real uuencode
+$encoded = $*PROGRAM.parent.add('data/test_image.jpg.uu').slurp;
+
+lives-ok {
+    $decoded = uudecode($encoded);
+}, "uudecode the image encoded by the real uuencode";
+
+is-deeply $decoded, $image, "and it was round-tripped successfully";
+
 done-testing();
 
 # vim: ft=raku

@@ -40,4 +40,11 @@ There are no depenencies.
 
 This is one of those things that either works or it doesn't but if you have a problem or suggestions please report them on [Github](https://github.com/jonathanstowe/Util-Uuencode/issues).
 
-## Copyright && Li
+## Licence
+
+This is free software.
+
+Please see the [LICENCE](LICENCE) file in the distribution.
+
+© Jonathan Stowe 2020
+

@@ -1,0 +1,15 @@
+#!/usr/bin/env raku
+
+use v6;
+
+use Util::Uuencode;
+
+sub MAIN( Str $file-name, Bool :$strict ) {
+    my IO::Path $file = $file-name.IO;
+    my $mode = $file.mode.Str;
+    my Str $encoded = uuencode($file.slurp(:bin), :$strict);
+    say "begin $mode -\n{ $encoded }`\nend";
+}
+
+
+# vim: ft=raku
