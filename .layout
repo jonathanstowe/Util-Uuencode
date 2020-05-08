@@ -1,0 +1,80 @@
+{
+  "type": "layout",
+  "children": [
+    {
+      "name": "META6.json",
+      "type": "file"
+    },
+    {
+      "type": "file",
+      "name": "Changes"
+    },
+    {
+      "name": "LICENCE",
+      "type": "file"
+    },
+    {
+      "name": "t",
+      "children": [
+        {
+          "name": "010-encode-decode.t",
+          "type": "file"
+        },
+        {
+          "type": "directory",
+          "purpose": "test-data",
+          "children": [
+            {
+              "type": "file",
+              "name": "test_image.jpg.uu"
+            },
+            {
+              "type": "file",
+              "name": "test_image.jpg"
+            }
+          ],
+          "name": "data"
+        },
+        {
+          "name": "001-meta.t",
+          "type": "file"
+        }
+      ],
+      "purpose": "tests",
+      "type": "directory"
+    },
+    {
+      "purpose": "library",
+      "type": "directory",
+      "name": "lib",
+      "children": [
+        {
+          "purpose": null,
+          "type": "directory",
+          "name": "Util",
+          "children": [
+            {
+              "name": "Uuencode.rakumod",
+              "type": "file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "purpose": "scripts",
+      "type": "directory",
+      "name": "bin",
+      "children": [
+        {
+          "name": "raku-uuencode",
+          "type": "file"
+        }
+      ]
+    },
+    {
+      "name": "README.md",
+      "type": "file"
+    }
+  ]
+}
