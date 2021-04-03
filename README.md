@@ -2,6 +2,8 @@
 
 uuencode/uudecode for Raku
 
+![Build Status](https://github.com/jonathanstowe/Util-Uuencode/workflows/CI/badge.svg)
+
 ## Synopsis
 
    use Util::Uuencode;
