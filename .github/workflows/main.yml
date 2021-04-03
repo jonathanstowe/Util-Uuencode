@@ -23,8 +23,5 @@ jobs:
     - name: Raku version
       run: raku -v
 
-    - name: Install dependencies
-      run: zef install --deps-only --/test --test-depends .
-
     - name: Run tests
       run: zef test -v --debug .
