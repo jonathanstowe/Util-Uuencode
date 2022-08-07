@@ -1,33 +1,36 @@
 {
-  "name": "Util::Uuencode",
-  "version": "0.0.2",
-  "auth": "github:jonathanstowe",
-  "api" : "1.0",
-  "license": "Artistic-2.0",
-  "tags": [
-        "util", "uuencode", "unix", "encode"
-  ],
-  "provides": {
-        "Util::Uuencode":  "lib/Util/Uuencode.rakumod"
-  },
-  "build-depends": [
-  ],
-  "description": "uuencode and uudecode for raku",
+  "version": "0.0.3",
   "depends": [
   ],
-  "test-depends": [
-  ],
-  "raku": "6.d",
   "authors": [
     "Jonathan Stowe <jns+gh@gellyfish.co.uk>"
   ],
+  "resources": [
+  ],
+  "auth": "zef:jonathanstowe",
+  "name": "Util::Uuencode",
+  "license": "Artistic-2.0",
+  "test-depends": [
+  ],
+  "api": "1.0",
+  "description": "uuencode and uudecode for raku",
+  "source-url": "https://github.com/jonathanstowe/Util-Uuencode.git",
   "meta-version": "1",
+  "raku": "6.d",
+  "build-depends": [
+  ],
   "support": {
     "source": "https://github.com/jonathanstowe/Util-Uuencode.git",
     "bugtracker": "https://github.com/jonathanstowe/Util-Uuencode/issues",
     "email": "jns+gh@gellyfish.co.uk"
   },
-  "source-url": "https://github.com/jonathanstowe/Util-Uuencode.git",
-  "resources": [
-  ]
+  "tags": [
+    "util",
+    "uuencode",
+    "unix",
+    "encode"
+  ],
+  "provides": {
+    "Util::Uuencode": "lib/Util/Uuencode.rakumod"
+  }
 }
